@@ -7,12 +7,23 @@
     body {
       font-family: 'Georgia', serif;
       text-align: center;
-      background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
+      background-color: #fdf6f0;
+      color: #2e2e2e;
+      margin: 0;
+    }
+
+    .header-banner {
+      background-image: url('banner.jpg');
       background-size: cover;
       background-position: center;
-      color: #2e2e2e;
+      height: 220px;
+      width: 100%;
+    }
+
+    .content {
       padding: 2em;
     }
+
     .lang-buttons button {
       margin: 8px;
       padding: 8px 14px;
@@ -23,17 +34,21 @@
       cursor: pointer;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+
     .lang-buttons button:hover {
       background-color: #f0e6dc;
     }
+
     h1 {
       color: #a0522d;
       font-size: 2em;
     }
+
     h2 {
       font-size: 1.8em;
       margin-top: 10px;
     }
+
     .details {
       margin-top: 2em;
       font-size: 1.1em;
@@ -43,9 +58,11 @@
       border-radius: 10px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
+
     .photo {
       margin-top: 2em;
     }
+
     .photo img {
       max-width: 300px;
       border-radius: 12px;
@@ -55,25 +72,29 @@
 </head>
 <body>
 
-  <div class="lang-buttons">
-    <button onclick="setLanguage('en')">🇬🇧 English</button>
-    <button onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
-    <button onclick="setLanguage('kk')">🇰🇿 Қазақша</button>
-    <button onclick="setLanguage('ru')">🇷🇺 Русский</button>
-  </div>
+  <div class="header-banner"></div>
 
-  <h1 id="title"></h1>
-  <p id="intro"></p>
-  <h2 id="names"></h2>
+  <div class="content">
+    <div class="lang-buttons">
+      <button onclick="setLanguage('en')">🇬🇧 English</button>
+      <button onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
+      <button onclick="setLanguage('kk')">🇰🇿 Қазақша</button>
+      <button onclick="setLanguage('ru')">🇷🇺 Русский</button>
+    </div>
 
-  <div class="details">
-    <p><strong id="date-label"></strong> <span id="date-value"></span></p>
-    <p><strong id="location-label"></strong> <span id="location-value"></span></p>
-    <p><strong id="rsvp-label"></strong> <span id="rsvp-value"></span></p>
-  </div>
+    <h1 id="title"></h1>
+    <p id="intro"></p>
+    <h2 id="names"></h2>
 
-  <div class="photo">
-    <img src="couple.jpg" alt="Ömer and Aizhan">
+    <div class="details">
+      <p><strong id="date-label"></strong> <span id="date-value"></span></p>
+      <p><strong id="location-label"></strong> <span id="location-value"></span></p>
+      <p><strong id="rsvp-label"></strong> <span id="rsvp-value"></span></p>
+    </div>
+
+    <div class="photo">
+      <img src="couple.jpg" alt="Ömer and Aizhan">
+    </div>
   </div>
 
   <script>
