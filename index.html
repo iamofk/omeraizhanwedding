@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Invitation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fdf6f0;
+      padding: 2em;
+    }
+    h1 {
+      color: #a0522d;
+    }
+    .lang-buttons button {
+      margin: 0 8px;
+      padding: 6px 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .details {
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-buttons">
+    <button onclick="setLanguage('en')">🇬🇧 English</button>
+    <button onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
+    <button onclick="setLanguage('kk')">🇰🇿 Қазақша</button>
+    <button onclick="setLanguage('ru')">🇷🇺 Русский</button>
+  </div>
+
+  <h1 id="title"></h1>
+  <p id="intro"></p>
+  <h2 id="names"></h2>
+
+  <div class="details">
+    <p><strong id="date-label"></strong> <span id="date-value"></span></p>
+    <p><strong id="location-label"></strong> <span id="location-value"></span></p>
+    <p><strong id="rsvp-label"></strong> <span id="rsvp-value"></span></p>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        title: "You're Invited!",
+        intro: "Join us in celebrating the wedding of",
+        names: "Ömer & Aizhan",
+        dateLabel: "Date:",
+        dateValue: "13 August 2025",
+        locationLabel: "Location:",
+        locationValue: "Sivas, Türkiye",
+        rsvpLabel: "RSVP:",
+        rsvpValue: "Please respond by 1 July 2025"
+      },
+      tr: {
+        title: "Düğün Davetiyesi",
+        intro: "Ömer & Aizhan'in düğününü kutlamak için bize katılın",
+        names: "Ömer & Aizhan",
+        dateLabel: "Tarih:",
+        dateValue: "13 Ağustos 2025",
+        locationLabel: "Yer:",
+        locationValue: "Sivas, Türkiye",
+        rsvpLabel: "Lütfen Cevaplayın:",
+        rsvpValue: "1 Temmuz 2025'e kadar yanıt veriniz"
+      },
+      kk: {
+        title: "Үйлену тойына шақыру",
+        intro: "Өмер мен Айжанның үйлену тойына шақырамыз!",
+        names: "Өмер & Айжан",
+        dateLabel: "Күні:",
+        dateValue: "2025 жылғы 13 тамыз",
+        locationLabel: "Орыны:",
+        locationValue: "Сивас, Түркия",
+        rsvpLabel: "Жауап беру мерзімі:",
+        rsvpValue: "2025 жылғы 1 шілдеге дейін жауап беріңіз"
+      },
+      ru: {
+        title: "Вы приглашены!",
+        intro: "Присоединяйтесь к празднованию свадьбы",
+        names: "Омер и Айжан",
+        dateLabel: "Дата:",
+        dateValue: "13 августа 2025",
+        locationLabel: "Место:",
+        locationValue: "Сивас, Турция",
+        rsvpLabel: "Ответить до:",
+        rsvpValue: "Пожалуйста, ответьте до 1 июля 2025 года"
+      }
+    };
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('intro').textContent = t.intro;
+      document.getElementById('names').textContent = t.names;
+      document.getElementById('date-label').textContent = t.dateLabel;
+      document.getElementById('date-value').textContent = t.dateValue;
+      document.getElementById('location-label').textContent = t.locationLabel;
+      document.getElementById('location-value').textContent = t.locationValue;
+      document.getElementById('rsvp-label').textContent = t.rsvpLabel;
+      document.getElementById('rsvp-value').textContent = t.rsvpValue;
+    }
+
+    setLanguage('en');
+  </script>
+
+</body>
+</html>
